@@ -6,6 +6,7 @@
     <title>Submit Complaint</title>
 </head>
 <body>
+    
     <h2>Submit Complaint</h2>
     <form action="submit_complaint.php" method="post">
         <label for="type">Type of Complaint:</label>
