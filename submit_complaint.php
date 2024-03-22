@@ -1,33 +1,32 @@
 <?php
-  if($_SERVER['REQUEST_METHOD']=="POST"){
+if($_SERVER['REQUEST_METHOD']=="POST"){
     include 'connect.php';
 
-    // $username=$_POST['username'];
-    // $password=$_POST['password'];
-    
-    $type=$_POST['type'];
-    $state=$_POST['state'];
-    $district=$_POST['district'];
-    $pincode=$_POST['pincode'];
-    $evidence=$_POST['evidence'];
-    $datetime=time();
-    $description=$_POST['description'];
+    // Retrieve form data
+    $type = $_POST['type'];
+    $state = $_POST['state'];
+    $district = $_POST['district'];
+    $pincode = $_POST['pincode'];
+    // Handle file upload
+    $evidence = $_FILES['evidence']['name'];
+    $tempFile = $_FILES['evidence']['tmp_name'];
+    $uploadDirectory = 'uploads/';
+    $targetFile = $uploadDirectory . basename($evidence);
+    move_uploaded_file($tempFile, $targetFile);
+    $datetime = time();
+    $description = $_POST['description'];
 
-    $sql="insert into  `compliants` (type,state,district,pincode,evidence,datetime,description) 
-    values('$type','$state','$district','$pincode','$evidence','$datetime','$description')";
-    // $sql="insert into complaints values ('')";
-    //$sql="select * from `logindata` where username= '$username' and password='$password'";
-    $result=mysqli_query($connection,$sql);
+    // Insert data into database
+    $sql = "INSERT INTO `complaints` (type, state, district, pincode, evidence, datetime, description) 
+            VALUES ('$type', '$state', '$district', '$pincode', '$evidence', '$datetime', '$description')";
+    $result = mysqli_query($connection, $sql);
 
     if($result){
-      $num=mysqli_num_rows($result);
-      if($num>0){
-        session_start();
+        // If insertion was successful, redirect the user
         header('location:index.php');
-    }else{
-        echo "complaint is not submitted";
-
-      }
+        exit(); // Stop further execution
+    } else {
+        echo "Complaint is not submitted";
     }
-  }
+}
 ?>

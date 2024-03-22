@@ -8,10 +8,11 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#body">Contact</a>
-        <a href="#about">About</a>
+        <a href="#home">Home</a><br>
+        <a href="#services">Services</a><br>
+        <a href="http://localhost/SilentGuardian/complaint_form.php" target="_blank">Sumbit Complaint</a><br>
+        <a href="#body">Contact</a><br>
+        <a href="#about">About</a><br>
     </div>
     <div class="content">
     <h1>Embrace Protection with SilentGuardian</h1>
