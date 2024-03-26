@@ -70,7 +70,7 @@
    
     <fieldset class="field">
         <legend> <h2>Submit Complaint</h2></legend>
-    <form class="myform" action="submit_complaint.php" method="post">
+    <form class="myform" action="submit_complaint.php" method="post" enctype="multipart/form-data">
         <label for="type">Type of Complaint:</label>
         <select name="type" id="type">
             <option value="-------">select</option>

@@ -12,13 +12,13 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     // Handle file upload
     $evidence = $_FILES['evidence']['name'];
     $tempFile = $_FILES['evidence']['tmp_name'];
-    $uploadDirectory = '.\SilentGuardian\uploads';
+    $uploadDirectory = 'uploads/';
     $targetFile = $uploadDirectory . basename($evidence);
     move_uploaded_file($tempFile, $targetFile);
 
     // Insert data into database
-    $sql = "INSERT INTO `complaints` (type, state, district, pincode, description) 
-            VALUES ('$type', '$state', '$district', '$pincode', '$description')";
+    $sql = "INSERT INTO `complaints` (type, state, district, pincode,evidence, description) 
+            VALUES ('$type', '$state', '$district', '$pincode','$targetFile', '$description')";
     $result = mysqli_query($connection, $sql);
 
     if($result){

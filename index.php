@@ -50,7 +50,7 @@
         border-radius:10%;
     }
     .card-img:hover{
-        width:300px;
+        width:330px;
         height:350px;
         border-radius:20%;
     }
@@ -107,8 +107,8 @@
     <div class="content">
         <div class="header">
         <h1><pre>
-Embrace Protection ....
-    with SilentGuardian</pre></h1>
+"Embrace Protection ....
+    with SilentGuardian"</pre></h1>
         </div >
 
         <div>
@@ -140,6 +140,7 @@ Embrace Protection ....
                 <li>Promote gender equality and empower girls.</li>
                 <li>Strengthen legal enforcement against underage marriages.</li>
             </ul>
+            <a href="https://www.indiacode.nic.in/bitstream/123456789/2055/1/A2007-06.pdf" target="_blank">Read more</a>
         </div>
         <div class="card">
             <h1>Human Trafficking Awareness</h1>
@@ -149,6 +150,8 @@ Embrace Protection ....
                 <li>Protect vulnerable groups effectively.</li>
                 <li>Use technology for prevention and enforcement.</li>
             </ul>
+            <a href="https://www.mea.gov.in/human-trafficking.htm" target="_blank">Read more</a>
+
         </div>
     </div>
 </div>
