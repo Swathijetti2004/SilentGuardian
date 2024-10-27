@@ -36,7 +36,8 @@ if(isset($success_msg)) {
 } elseif(isset($error_msg)) {
     echo "<script>alert('$error_msg');</script>";
 }
-connection.close();
+$connection->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
