@@ -11,3 +11,5 @@ The platform will be thoroughly tested for functionality, usability, and securit
 Promotion of the platform will be done through collaboration with NGOs and social media platforms. Maintaining and iterating the platform will be based on user feedback and usage metrics, ensuring ongoing effectiveness and security. Tools like Google Analytics can be used to track user behavior and identify areas for improvement.
 
 It is essential to follow best practices for secure coding and ensure that the application is compliant with relevant regulations such as GDPR and CCPA. By building "SilentGuardian," we can help combat illegal activities like child labor, child marriage, and human trafficking, ensuring a safer world for everyone.
+
+please make sure the database schema as the imahe in given schema.jpg
